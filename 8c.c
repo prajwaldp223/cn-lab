@@ -36,8 +36,7 @@ int main(int argc, char *argv[]) {
         error("Unknown host"); 
     } 
  
-    bcopy((char *)hp->h_addr, (char *)&server.sin_addr, hp
->h_length); 
+    bcopy((char *)hp->h_addr, (char *)&server.sin_addr, hp->h_length); 
     server.sin_port = htons(atoi(argv[2])); 
     length = sizeof(struct sockaddr_in); 
  
